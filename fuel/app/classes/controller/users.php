@@ -58,7 +58,6 @@ class Controller_Users extends Controller_Rest
                 'message' => 'usuario creado',
                 'name' => $input['name'],
                 'pass' => $input['pass']
-                //NOTA: BORRAR LA CONTRASEÑA DESPUES DE CONTROL DE ERRORES
             ));
 
             return $json;
@@ -120,18 +119,7 @@ class Controller_Users extends Controller_Rest
                 'name' => $user
             ));
 
-            return $json;
-
-        //} 
-        // catch (Exception $e) 
-        // {
-        //     $json = $this->response(array(
-        //         'code' => 500,
-        //         'message' => 'error interno del servidor',
-        //     ));
-
-        //     return $json;
-        // }        
+            return $json;      
     }
 
     public function get_login()
