@@ -13,4 +13,14 @@ class Model_Users extends Orm\Model
             'data_type' => 'varchar'   
         )
     );
+
+    protected static $_has_many = array(
+    'list' => array(
+        'key_from' => 'id',
+        'model_to' => 'Model_List',
+        'key_to' => 'id_user',
+        'cascade_save' => true,
+        'cascade_delete' => false,
+    	)
+    );
 }
