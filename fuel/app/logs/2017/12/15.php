@@ -126,3 +126,99 @@ WARNING - 2017-12-15 17:50:49 --> Fuel\Core\Fuel::init - The configured locale e
 WARNING - 2017-12-15 17:51:25 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
 ERROR - 2017-12-15 17:51:25 --> Error - Class 'Model_Canciones' not found in /var/www/html/julianparrillaRep/fuel/app/classes/controller/canciones.php on line 30
 WARNING - 2017-12-15 17:51:41 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 17:54:44 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 17:54:48 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 17:54:51 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 17:58:30 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 17:58:49 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 17:58:49 --> Notice - Undefined variable: user in /var/www/html/julianparrillaRep/fuel/app/classes/controller/canciones.php on line 98
+WARNING - 2017-12-15 17:59:20 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:00:13 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:01:54 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:01:54 --> Warning - Creating default object from empty value in /var/www/html/julianparrillaRep/fuel/app/classes/controller/canciones.php on line 91
+WARNING - 2017-12-15 18:02:02 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:03:26 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:03:26 --> 1054 - SQLSTATE[42S22]: Column not found: 1054 Unknown column 't0.name' in 'field list' with query: "SELECT `t0`.`name` AS `t0_c0`, `t0`.`id` AS `t0_c1` FROM `cancion` AS `t0`" in /var/www/html/julianparrillaRep/fuel/core/classes/database/pdo/connection.php on line 253
+WARNING - 2017-12-15 18:03:54 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:03:54 --> 1054 - SQLSTATE[42S22]: Column not found: 1054 Unknown column 't0.name' in 'field list' with query: "SELECT `t0`.`name` AS `t0_c0`, `t0`.`id` AS `t0_c1` FROM `cancion` AS `t0`" in /var/www/html/julianparrillaRep/fuel/core/classes/database/pdo/connection.php on line 253
+WARNING - 2017-12-15 18:04:21 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:05:15 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:05:15 --> 1054 - SQLSTATE[42S22]: Column not found: 1054 Unknown column 't0.name' in 'field list' with query: "SELECT `t0`.`name` AS `t0_c0`, `t0`.`id` AS `t0_c1` FROM `cancion` AS `t0`" in /var/www/html/julianparrillaRep/fuel/core/classes/database/pdo/connection.php on line 253
+WARNING - 2017-12-15 18:05:45 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:08:03 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:08:03 --> Error - Property "name" not found for Model_Cancion. in /var/www/html/julianparrillaRep/fuel/packages/orm/classes/model.php on line 1188
+WARNING - 2017-12-15 18:08:36 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:08:36 --> 1146 - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'BBDD_ejercicio3.list_cancion' doesn't exist with query: "SELECT `t0`.`nameList` AS `t0_c0`, `t0`.`id_user` AS `t0_c1`, `t0`.`id` AS `t0_c2` FROM `list` AS `t0` JOIN `list_cancion` AS `t0_through` ON (`t0_through`.`id_cancion` = `t0`.`id`) WHERE `t0_through`.`id_lista` = '2'" in /var/www/html/julianparrillaRep/fuel/core/classes/database/pdo/connection.php on line 253
+WARNING - 2017-12-15 18:09:22 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:09:22 --> 1146 - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'BBDD_ejercicio3.list_cancion' doesn't exist with query: "SELECT `t0`.`nameList` AS `t0_c0`, `t0`.`id_user` AS `t0_c1`, `t0`.`id` AS `t0_c2` FROM `list` AS `t0` JOIN `list_cancion` AS `t0_through` ON (`t0_through`.`id_cancion` = `t0`.`id`) WHERE `t0_through`.`id_lista` = '2'" in /var/www/html/julianparrillaRep/fuel/core/classes/database/pdo/connection.php on line 253
+WARNING - 2017-12-15 18:10:18 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:10:18 --> 1146 - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'BBDD_ejercicio3.list_cancion' doesn't exist with query: "SELECT `t0`.`nameList` AS `t0_c0`, `t0`.`id_user` AS `t0_c1`, `t0`.`id` AS `t0_c2` FROM `list` AS `t0` JOIN `list_cancion` AS `t0_through` ON (`t0_through`.`id_cancion` = `t0`.`id`) WHERE `t0_through`.`id_lista` = '2'" in /var/www/html/julianparrillaRep/fuel/core/classes/database/pdo/connection.php on line 253
+WARNING - 2017-12-15 18:11:06 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:11:06 --> Notice - Trying to get property of non-object in /var/www/html/julianparrillaRep/fuel/app/classes/controller/canciones.php on line 142
+WARNING - 2017-12-15 18:11:46 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:11:46 --> Error - Call to a member function delete() on array in /var/www/html/julianparrillaRep/fuel/app/classes/controller/canciones.php on line 142
+WARNING - 2017-12-15 18:12:08 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:12:08 --> Notice - Undefined variable: songName in /var/www/html/julianparrillaRep/fuel/app/classes/controller/canciones.php on line 147
+WARNING - 2017-12-15 18:12:23 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:12:44 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:13:03 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:13:14 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:13:14 --> Error - Call to a member function delete() on array in /var/www/html/julianparrillaRep/fuel/app/classes/controller/canciones.php on line 142
+WARNING - 2017-12-15 18:13:18 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:14:50 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:14:58 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:14:58 --> 1146 - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'BBDD_ejercicio3.list_cancion' doesn't exist with query: "SELECT `t0`.`nameList` AS `t0_c0`, `t0`.`id_user` AS `t0_c1`, `t0`.`id` AS `t0_c2` FROM `list` AS `t0` JOIN `list_cancion` AS `t0_through` ON (`t0_through`.`id_cancion` = `t0`.`id`) WHERE `t0_through`.`id_lista` = '2'" in /var/www/html/julianparrillaRep/fuel/core/classes/database/pdo/connection.php on line 253
+WARNING - 2017-12-15 18:15:17 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:15:28 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:16:22 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:16:48 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:17:08 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:17:08 --> 1146 - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'BBDD_ejercicio3.list_cancion' doesn't exist with query: "SELECT `t0`.`nameList` AS `t0_c0`, `t0`.`id_user` AS `t0_c1`, `t0`.`id` AS `t0_c2` FROM `list` AS `t0` JOIN `list_cancion` AS `t0_through` ON (`t0_through`.`id_cancion` = `t0`.`id`) WHERE `t0_through`.`id_lista` = '1'" in /var/www/html/julianparrillaRep/fuel/core/classes/database/pdo/connection.php on line 253
+WARNING - 2017-12-15 18:20:54 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:20:55 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:20:56 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:20:57 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:20:57 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:21:00 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:21:01 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:21:02 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:21:02 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:21:03 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:21:17 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:21:21 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:21:25 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:21:27 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:21:31 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:21:39 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:21:41 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:21:44 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:21:47 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:21:50 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:21:53 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:21:56 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:21:56 --> 1146 - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'BBDD_ejercicio3.list_cancion' doesn't exist with query: "SELECT `t0`.`nameList` AS `t0_c0`, `t0`.`id_user` AS `t0_c1`, `t0`.`id` AS `t0_c2` FROM `list` AS `t0` JOIN `list_cancion` AS `t0_through` ON (`t0_through`.`id_cancion` = `t0`.`id`) WHERE `t0_through`.`id_lista` = '1'" in /var/www/html/julianparrillaRep/fuel/core/classes/database/pdo/connection.php on line 253
+WARNING - 2017-12-15 18:22:04 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:22:07 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:22:07 --> Error - Property "name" not found for Model_Cancion. in /var/www/html/julianparrillaRep/fuel/packages/orm/classes/model.php on line 1188
+WARNING - 2017-12-15 18:22:57 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:22:57 --> Error - Property "name" not found for Model_Cancion. in /var/www/html/julianparrillaRep/fuel/packages/orm/classes/model.php on line 1188
+WARNING - 2017-12-15 18:24:02 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:24:24 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:24:24 --> Error - syntax error, unexpected '$song' (T_VARIABLE), expecting ')' in /var/www/html/julianparrillaRep/fuel/app/classes/controller/canciones.php on line 116
+WARNING - 2017-12-15 18:24:35 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:24:53 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:24:53 --> 1146 - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'BBDD_ejercicio3.list_cancion' doesn't exist with query: "SELECT `t0`.`nameList` AS `t0_c0`, `t0`.`id_user` AS `t0_c1`, `t0`.`id` AS `t0_c2` FROM `list` AS `t0` JOIN `list_cancion` AS `t0_through` ON (`t0_through`.`id_cancion` = `t0`.`id`) WHERE `t0_through`.`id_lista` = '1'" in /var/www/html/julianparrillaRep/fuel/core/classes/database/pdo/connection.php on line 253
+WARNING - 2017-12-15 18:25:49 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:28:20 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:28:46 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:29:50 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:29:50 --> Error - Property "name" not found for Model_Cancion. in /var/www/html/julianparrillaRep/fuel/packages/orm/classes/model.php on line 1188
+WARNING - 2017-12-15 18:30:01 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:30:01 --> Notice - Undefined index: nameSong in /var/www/html/julianparrillaRep/fuel/app/classes/controller/canciones.php on line 91
+WARNING - 2017-12-15 18:30:25 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:30:25 --> Error - Property "name" not found for Model_Cancion. in /var/www/html/julianparrillaRep/fuel/packages/orm/classes/model.php on line 1188
+WARNING - 2017-12-15 18:30:34 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 18:30:34 --> Error - Property "name" not found for Model_Cancion. in /var/www/html/julianparrillaRep/fuel/packages/orm/classes/model.php on line 1188
+WARNING - 2017-12-15 18:30:44 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:31:30 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 18:31:37 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.

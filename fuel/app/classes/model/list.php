@@ -19,7 +19,7 @@ class Model_List extends Orm\Model
         'key_from' => 'id_user',
         'model_to' => 'Model_Users',
         'key_to' => 'id',
-        'cascade_save' => true,
+        'cascade_save' => false,
         'cascade_delete' => false,
         )
     );
@@ -28,11 +28,11 @@ class Model_List extends Orm\Model
     'list' => array(
         'key_from' => 'id',
         'key_through_from' => 'id_cancion', // column 1 from the table in between, should match a posts.id
-        'table_through' => 'list_cancion', // both models plural without prefix in alphabetical order
+        'table_through' => 'contiene', // both models plural without prefix in alphabetical order
         'key_through_to' => 'id_lista', // column 2 from the table in between, should match a users.id
         'model_to' => 'Model_Cancion',
         'key_to' => 'id',
-        'cascade_save' => true,
+        'cascade_save' => false,
         'cascade_delete' => false,
         )
     );

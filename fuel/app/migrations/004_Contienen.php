@@ -21,7 +21,7 @@ class Contienen
 		                'table' => 'list',
 		                'column' => 'id',
 		            ),
-		            'on_update' => 'CASCADE',
+		            'on_update' => 'RESTRICT',
 		            'on_delete' => 'RESTRICT'
 		        ),
                 array(
@@ -31,7 +31,7 @@ class Contienen
                         'table' => 'cancion',
                         'column' => 'id',
                     ),
-                    'on_update' => 'CASCADE',
+                    'on_update' => 'RESTRICT',
                     'on_delete' => 'RESTRICT'
                 )
 			)
