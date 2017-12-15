@@ -1,29 +1,8 @@
 <?php 
 use \Firebase\JWT\JWT;
 
-class Controller_Users extends Controller_Rest 
+class Controller_Users extends Controller_Base 
 {   
-    public function get_checkToken()
-    {
-        $headers = apache_request_headers();
-        $token = $headers['Authorization'];
-           
-        if($token == "null"){    
-            $json = $this->response(array(
-                    'code' => 401,
-                    'message' => false,
-            ));
-        }else{
-            $tokenDecodificado = JWT::decode($token, "TextKey", array('HS256'));
-            $json = $this->response(array(
-                    'code' => 201,
-                    'message' => $tokenDecodificado->logged,
-            ));
-        }
-        
-        return $json;
-    }
-
     public function post_create()
     {
         try {
@@ -49,7 +28,7 @@ class Controller_Users extends Controller_Rest
 
             $input = $_POST;
             $user = new Model_Users();
-	    //$user -> list = Model_List::find(id)
+	       //$user -> list = Model_List::find(id)
             $user->name = $input['name'];
             $user->pass = $input['pass'];
             $user->save();
@@ -197,10 +176,11 @@ class Controller_Users extends Controller_Rest
                 $show[] = $value->name;
                 $showID[] = $value->id;
         }
-
+        $test = self::checkToken();
         $json = $this->response(array(
             'name' => $show,
-            'id' => $showID
+            'id' => $showID,
+            'bolean' => $test
         ));
 
         return $json;  

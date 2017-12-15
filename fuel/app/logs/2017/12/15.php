@@ -222,3 +222,19 @@ ERROR - 2017-12-15 18:30:34 --> Error - Property "name" not found for Model_Canc
 WARNING - 2017-12-15 18:30:44 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
 WARNING - 2017-12-15 18:31:30 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
 WARNING - 2017-12-15 18:31:37 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 19:39:42 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 19:41:56 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 19:43:37 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 20:03:52 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 20:03:52 --> Error - Undefined class constant 'checkToken' in /var/www/html/julianparrillaRep/fuel/app/classes/controller/listas.php on line 20
+WARNING - 2017-12-15 20:04:07 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-12-15 20:04:07 --> Error - Class 'Model_Listas' not found in /var/www/html/julianparrillaRep/fuel/app/classes/controller/listas.php on line 21
+WARNING - 2017-12-15 20:04:22 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 20:05:13 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 20:06:04 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 20:06:46 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 20:06:52 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 20:07:08 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 20:08:51 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 20:09:28 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-12-15 20:09:36 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.

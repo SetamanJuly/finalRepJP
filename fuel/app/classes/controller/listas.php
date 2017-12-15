@@ -1,42 +1,33 @@
 <?php 
 use \Firebase\JWT\JWT;
 
-class Controller_Canciones extends Controller_Rest 
+class Controller_Listas extends Controller_Base 
 {   
     public function post_create()
     {
         try {
-            if ( ! isset($_POST['name'])) 
+            if ( ! isset($_POST['nameList'])) 
             {
                 $json = $this->response(array(
                     'code' => 400,
-                    'message' => 'parametro incorrecto, se necesita que el parametro se llame name'
-                ));
-
-                return $json;
-            }
-
-            if ( ! isset($_POST['urlS'])) 
-            {
-                $json = $this->response(array(
-                    'code' => 400,
-                    'message' => 'parametro incorrecto, se necesita que el parametro url'
+                    'message' => 'parametro incorrecto, se necesita que el parametro nombre de lista'
                 ));
 
                 return $json;
             }
 
             $input = $_POST;
-            $song = new Model_Cancion();
-            $song->nameSong = $input['name'];
-            $song->urlSong = $input['urlS'];
-            $song->save();
+            $idUsuarioEnTKN = self::checkToken();
+            $list = new Model_List();
+            $list->nameList = $input['nameList'];
+            $list->id_user = $idUsuarioEnTKN;
+            $list->save();
 
             $json = $this->response(array(
                 'code' => 201,
                 'message' => 'Cancion creada',
-                'name' => $input['name'],
-                'url' => $input['urlS']
+                'name' => $input['nameList'],
+                'idCreador' => $idUsuarioEnTKN
             ));
 
             return $json;
@@ -101,12 +92,12 @@ class Controller_Canciones extends Controller_Rest
             return $json;      
     }
 
-    public function get_songs()
+    public function get_lists()
     {
-        $song = Model_Cancion::find('all', ['select' => 'nameSong']);
+        $list = Model_List::find('all', ['select' => 'nameList']);
 
         $json = $this->response(array(
-            $song
+            $list,
         ));
 
         return $json;  

@@ -1,7 +1,7 @@
 <?php 
 use \Firebase\JWT\JWT;
 
-class Controller_Canciones extends Controller_Rest 
+class Controller_Canciones extends Controller_Base 
 {   
     public function post_create()
     {
