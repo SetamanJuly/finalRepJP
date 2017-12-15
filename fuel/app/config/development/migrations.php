@@ -6,7 +6,10 @@ return array(
     array(
       'default' => 
       array(
-        0 => '001_EjemploJuli2',
+        0 => '001_Users',
+        1 => '002_Canciones',
+        2 => '003_Listas',
+        3 => '004_Contienen',
       ),
     ),
     'module' => 

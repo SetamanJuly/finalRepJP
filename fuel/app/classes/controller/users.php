@@ -49,6 +49,7 @@ class Controller_Users extends Controller_Rest
 
             $input = $_POST;
             $user = new Model_Users();
+	    //$user -> list = Model_List::find(id)
             $user->name = $input['name'];
             $user->pass = $input['pass'];
             $user->save();

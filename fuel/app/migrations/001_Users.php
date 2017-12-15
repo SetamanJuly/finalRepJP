@@ -2,7 +2,7 @@
 
 namespace Fuel\Migrations;
 
-class EjemploJuli2
+class Users
 {
 
     function up()
