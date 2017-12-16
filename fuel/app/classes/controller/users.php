@@ -26,21 +26,40 @@ class Controller_Users extends Controller_Base
                 return $json;
             }
 
-            $input = $_POST;
-            $user = new Model_Users();
-	       //$user -> list = Model_List::find(id)
-            $user->name = $input['name'];
-            $user->pass = $input['pass'];
-            $user->save();
+            $check = Model_Users::find('all', ['where' => ['name' => $_POST['name']]]);
+			
+			$boolTested;
 
-            $json = $this->response(array(
-                'code' => 201,
-                'message' => 'usuario creado',
-                'name' => $input['name'],
-                'pass' => $input['pass']
-            ));
+	        if ($check == null){
+	        	$boolTested = false;
+	        }else{
+	        	$boolTested = true;
+	        }
 
-            return $json;
+            if ($boolTested == false){
+	            $input = $_POST;
+	            $user = new Model_Users();
+		       //$user -> list = Model_List::find(id)
+	            $user->name = $input['name'];
+	            $user->pass = $input['pass'];
+	            $user->save();
+
+	            $json = $this->response(array(
+	                'code' => 201,
+	                'message' => 'usuario creado',
+	                'name' => $input['name'],
+	                'pass' => $input['pass']
+	            ));
+
+	            return $json;
+            }else{
+            	$json = $this->response(array(
+	                'code' => 204,
+	                'message' => 'el usuario ya existe'
+	            ));
+
+	            return $json;
+            }
 
         } 
         catch (Exception $e) 
@@ -54,19 +73,19 @@ class Controller_Users extends Controller_Base
         }        
     }
 
+    public function checkUserExist($nameToCheck)
+    {
+        $users = Model_Users::find('all', ['where' => ['name' => $nameToCheck]]);
+
+        if ($users == null){
+        	return false;
+        }else{
+        	return true;
+        }
+    }
+
     public function post_modify()
     {
-        //try {
-            if ( ! isset($_POST['name'])) 
-            {
-                $json = $this->response(array(
-                    'code' => 400,
-                    'message' => 'parametro incorrecto, se necesita que el parametro se llame name'
-                ));
-
-                return $json;
-            }
-
             if ( ! isset($_POST['pass'])) 
             {
                 $json = $this->response(array(
@@ -77,25 +96,15 @@ class Controller_Users extends Controller_Base
                 return $json;
             }
 
-            if ( ! isset($_POST['iduser'])) 
-            {
-                $json = $this->response(array(
-                    'code' => 400,
-                    'message' => 'parametro incorrecto, se necesita que el parametro se llame id'
-                ));
-
-                return $json;
-            }
-
             $input = $_POST;
-            $user = Model_Users::find($input['iduser']);
-            $user->name = $_POST['name'];
+            $idUser = self::checkToken();
+            $user = Model_Users::find($idUser);
             $user->pass = $_POST['pass'];
             $user->save();
 
             $json = $this->response(array(
                 'code' => 200,
-                'message' => 'usuario modificado',
+                'message' => 'contraseña modificada',
                 'name' => $user
             ));
 
@@ -205,7 +214,8 @@ class Controller_Users extends Controller_Base
 
     public function post_delete()
     {
-        $user = Model_Users::find($_POST['id']);
+    	$idABorrar = self::checkToken();
+        $user = Model_Users::find($idABorrar);
         $userName = $user->name;
         $user->delete();
 

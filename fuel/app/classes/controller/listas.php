@@ -94,7 +94,8 @@ class Controller_Listas extends Controller_Base
 
     public function get_lists()
     {
-        $list = Model_List::find('all', ['select' => 'nameList']);
+        $idUser = self::checkToken();
+        $list = Model_List::find('all', ['where' => ['id_user' =>$idUser]]);
 
         $json = $this->response(array(
             $list,
@@ -105,14 +106,13 @@ class Controller_Listas extends Controller_Base
 
     public function post_delete()
     {
-        $song = Model_Cancion::find($_POST['id']);
-        //$songName = $song->name;
-        $song->delete();
+        $list = Model_List::find($_POST['id']);
+        $list->delete();
 
         $json = $this->response(array(
             'code' => 200,
-            'message' => 'usuario borrado',
-            'name' => $song
+            'message' => 'lista borrada',
+            'name' => $list
         ));
 
         return $json;
