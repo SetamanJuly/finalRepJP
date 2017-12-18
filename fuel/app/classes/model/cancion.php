@@ -11,7 +11,11 @@ class Model_Cancion extends Orm\Model
         ),
         'urlSong' => array(
             'data_type' => 'varchar'   
+        ),
+        'nameArtist' => array(
+            'data_type' => 'varchar'   
         )
+
     );
 
     protected static $_many_many = array(

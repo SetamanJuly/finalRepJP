@@ -47,7 +47,7 @@ class Controller_Listas extends Controller_Base
     public function post_modify()
     {
         //try {
-            if ( ! isset($_POST['nameSong'])) 
+            if ( ! isset($_POST['nameList'])) 
             {
                 $json = $this->response(array(
                     'code' => 400,
@@ -57,17 +57,7 @@ class Controller_Listas extends Controller_Base
                 return $json;
             }
 
-            if ( ! isset($_POST['urlSong'])) 
-            {
-                $json = $this->response(array(
-                    'code' => 400,
-                    'message' => 'parametro incorrecto, se necesita que el parametro url'
-                ));
-
-                return $json;
-            }
-
-            if ( ! isset($_POST['idsong'])) 
+            if ( ! isset($_POST['idList'])) 
             {
                 $json = $this->response(array(
                     'code' => 400,
@@ -78,15 +68,14 @@ class Controller_Listas extends Controller_Base
             }
 
             $input = $_POST;
-            $song = Model_Cancion::find($input['idsong']);
-            $song->nameSong = $input['nameSong'];
-            $song->urlSong = $input['urlSong'];
+            $song = Model_List::find($input['idList']);
+            $song->nameList = $input['nameList'];
             $song->save();
 
             $json = $this->response(array(
                 'code' => 200,
-                'message' => 'cancion modificada',
-                'name' => $song->nameSong
+                'message' => 'lista modificada',
+                'name' => $song->nameList
             ));
 
             return $json;      

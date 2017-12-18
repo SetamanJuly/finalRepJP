@@ -10,7 +10,8 @@ class Controller_Users extends Controller_Base
             {
                 $json = $this->response(array(
                     'code' => 400,
-                    'message' => 'parametro incorrecto, se necesita que el parametro se llame name'
+                    'message' => 'parametro incorrecto, se necesita que el parametro se llame name',
+                    'data' => null
                 ));
 
                 return $json;
@@ -20,17 +21,31 @@ class Controller_Users extends Controller_Base
             {
                 $json = $this->response(array(
                     'code' => 400,
-                    'message' => 'parametro incorrecto, se necesita que el parametro se llame pass'
+                    'message' => 'parametro incorrecto, se necesita que el parametro se llame pass',
+                    'data' => null
                 ));
 
                 return $json;
             }
 
-            $check = Model_Users::find('all', ['where' => ['name' => $_POST['name']]]);
+            if ( ! isset($_POST['email'])) 
+            {
+                $json = $this->response(array(
+                    'code' => 400,
+                    'message' => 'parametro incorrecto, se necesita que el parametro email',
+                    'data' => null
+                ));
+
+                return $json;
+            }
+
+            $checkUsername = Model_Users::find('all', ['where' => ['name' => $_POST['name']]]);
 			
+            $checkEmail = Model_Users::find('all', ['where' => ['email' => $_POST['email']]]);
+
 			$boolTested;
 
-	        if ($check == null){
+	        if ($checkUsername == null && $checkEmail == null){
 	        	$boolTested = false;
 	        }else{
 	        	$boolTested = true;
@@ -39,25 +54,24 @@ class Controller_Users extends Controller_Base
             if ($boolTested == false){
 	            $input = $_POST;
 	            $user = new Model_Users();
-		       //$user -> list = Model_List::find(id)
 	            $user->name = $input['name'];
 	            $user->pass = $input['pass'];
+	            $user->email = $input['email'];
 	            $user->save();
 
 	            $json = $this->response(array(
 	                'code' => 201,
 	                'message' => 'usuario creado',
-	                'name' => $input['name'],
-	                'pass' => $input['pass']
+	                'data' => $user
 	            ));
 
 	            return $json;
             }else{
             	$json = $this->response(array(
 	                'code' => 204,
-	                'message' => 'el usuario ya existe'
+	                'message' => 'el usuario ya existe',
+                    'data' => null
 	            ));
-
 	            return $json;
             }
 
@@ -67,21 +81,11 @@ class Controller_Users extends Controller_Base
             $json = $this->response(array(
                 'code' => 500,
                 'message' => 'error interno del servidor',
+                'data' => null
             ));
 
             return $json;
         }        
-    }
-
-    public function checkUserExist($nameToCheck)
-    {
-        $users = Model_Users::find('all', ['where' => ['name' => $nameToCheck]]);
-
-        if ($users == null){
-        	return false;
-        }else{
-        	return true;
-        }
     }
 
     public function post_modify()
@@ -90,7 +94,8 @@ class Controller_Users extends Controller_Base
             {
                 $json = $this->response(array(
                     'code' => 400,
-                    'message' => 'parametro incorrecto, se necesita que el parametro se llame pass'
+                    'message' => 'parametro incorrecto, se necesita que el parametro se llame pass',
+                    'data' => null
                 ));
 
                 return $json;
@@ -105,7 +110,7 @@ class Controller_Users extends Controller_Base
             $json = $this->response(array(
                 'code' => 200,
                 'message' => 'contraseña modificada',
-                'name' => $user
+                'data' => $user
             ));
 
             return $json;      
@@ -118,7 +123,8 @@ class Controller_Users extends Controller_Base
             {
                 $json = $this->response(array(
                     'code' => 400,
-                    'message' => 'parametro incorrecto, se necesita que el parametro se name'
+                    'message' => 'parametro incorrecto, se necesita que el parametro se name',
+                    'data' => null
                 ));
 
                 return $json;
@@ -128,7 +134,8 @@ class Controller_Users extends Controller_Base
             {
                 $json = $this->response(array(
                     'code' => 400,
-                    'message' => 'parametro incorrecto, se necesita que el parametro se llame pass'
+                    'message' => 'parametro incorrecto, se necesita que el parametro se llame pass',
+                    'data' => null
                 ));
 
                 return $json;
@@ -143,7 +150,8 @@ class Controller_Users extends Controller_Base
             if ($users == null){
                 $json = $this->response(array(
                     'code' => 401,
-                    'message' => 'usuario o contraseña incorrecto'
+                    'message' => 'usuario o contraseña incorrecto',
+                    'data' => null
                 ));
                 return $json;
             }else{
@@ -160,7 +168,7 @@ class Controller_Users extends Controller_Base
                 $json = $this->response(array(
                     'code' => 201,
                     'message' => 'Logeado',
-                    'token' => $jwt                
+                    'token' => $jwt             
                 ));
                 return $json;  
             }
@@ -206,7 +214,8 @@ class Controller_Users extends Controller_Base
 
         $json = $this->response(array(
             'name' => $show,
-            'pass' => $showP
+            'pass' => $showP,
+            'data' => null
         ));
 
         return $json;  
@@ -222,7 +231,7 @@ class Controller_Users extends Controller_Base
         $json = $this->response(array(
             'code' => 200,
             'message' => 'usuario borrado',
-            'name' => $userName
+            'data' => $userName
         ));
 
         return $json;
