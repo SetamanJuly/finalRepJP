@@ -11,6 +11,9 @@ class Model_Users extends Orm\Model
         ),
         'pass' => array(
             'data_type' => 'varchar'   
+        ),
+        'email' => array(
+            'data_type' => 'varchar'   
         )
     );
 
