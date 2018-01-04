@@ -5,7 +5,7 @@ class Model_List extends Orm\Model
     protected static $_table_name = 'list';
     protected static $_primary_key = array('id');
     protected static $_properties = array(
-        'id', // both validation & typing observers will ignore the PK
+        'id', 
         'nameList' => array(
             'data_type' => 'varchar'   
         ),
@@ -27,9 +27,9 @@ class Model_List extends Orm\Model
     protected static $_many_many = array(
     'cancion' => array(
         'key_from' => 'id',
-        'key_through_from' => 'id_cancion', // column 1 from the table in between, should match a posts.id
-        'table_through' => 'contiene', // both models plural without prefix in alphabetical order
-        'key_through_to' => 'id_lista', // column 2 from the table in between, should match a users.id
+        'key_through_from' => 'id_cancion', 
+        'table_through' => 'contiene',
+        'key_through_to' => 'id_lista',
         'model_to' => 'Model_Cancion',
         'key_to' => 'id',
         'cascade_save' => false,

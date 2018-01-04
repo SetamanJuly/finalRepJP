@@ -115,12 +115,11 @@ class Controller_Canciones extends Controller_Base
     public function post_delete()
     {
         $song = Model_Cancion::find($_POST['id']);
-        //$songName = $song->name;
         $song->delete();
 
         $json = $this->response(array(
             'code' => 200,
-            'message' => 'usuario borrado',
+            'message' => 'cancion borrado',
             'name' => $song
         ));
 

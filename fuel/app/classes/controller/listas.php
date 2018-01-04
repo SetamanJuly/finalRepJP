@@ -25,7 +25,7 @@ class Controller_Listas extends Controller_Base
 
             $json = $this->response(array(
                 'code' => 201,
-                'message' => 'Cancion creada',
+                'message' => 'Lista creada',
                 'name' => $input['nameList'],
                 'idCreador' => $idUsuarioEnTKN
             ));
