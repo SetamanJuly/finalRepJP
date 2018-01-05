@@ -39,6 +39,17 @@ class Controller_Users extends Controller_Base
                 return $json;
             }
 
+            if ( ! isset($_POST['rol'])) 
+            {
+                $json = $this->response(array(
+                    'code' => 400,
+                    'message' => 'parametro incorrecto, se necesita que el parametro rol',
+                    'data' => null
+                ));
+
+                return $json;
+            }
+
             $checkUsername = Model_Users::find('all', ['where' => ['name' => $_POST['name']]]);
 			
             $checkEmail = Model_Users::find('all', ['where' => ['email' => $_POST['email']]]);
@@ -57,6 +68,7 @@ class Controller_Users extends Controller_Base
 	            $user->name = $input['name'];
 	            $user->pass = $input['pass'];
 	            $user->email = $input['email'];
+                $user->id_rol = $input['rol'];
 	            $user->save();
 
 	            $json = $this->response(array(

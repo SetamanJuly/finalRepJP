@@ -5,7 +5,7 @@ class Model_Cancion extends Orm\Model
     protected static $_table_name = 'cancion';
     protected static $_primary_key = array('id');
     protected static $_properties = array(
-        'id', // both validation & typing observers will ignore the PK
+        'id',
         'nameSong' => array(
             'data_type' => 'varchar'   
         ),
@@ -15,7 +15,6 @@ class Model_Cancion extends Orm\Model
         'nameArtist' => array(
             'data_type' => 'varchar'   
         )
-
     );
 
     protected static $_many_many = array(

@@ -37,17 +37,14 @@ class Model_Users extends Orm\Model
         'key_to' => 'id_user',
         'cascade_save' => true,
         'cascade_delete' => false,
-    	)
-    );
-
-    protected static $_has_many = array(
-    'noticias' => array(
+    	),
+    'noticia' => array(
         'key_from' => 'id',
         'model_to' => 'Model_Noticias',
         'key_to' => 'id_user',
-        'cascade_save' => true,
+        'cascade_save' => false,
         'cascade_delete' => false,
-    	)
+        )    
     );
 
     protected static $_many_many = array(
@@ -60,10 +57,7 @@ class Model_Users extends Orm\Model
         'key_to' => 'id',
         'cascade_save' => false,
         'cascade_delete' => false,
-        )
-    );
-
-    protected static $_many_many = array(
+        ),
     'seguidor' => array(
         'key_from' => 'id',
         'key_through_from' => 'id_seguidor', 
