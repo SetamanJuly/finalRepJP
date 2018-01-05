@@ -54,10 +54,6 @@ class Controller_Users extends Controller_Base
             if ($boolTested == false){
 	            $input = $_POST;
 	            $user = new Model_Users();
-<<<<<<< HEAD
-		    //$user -> list = Model_List::find(id)
-=======
->>>>>>> 33df37037fd61bb6b39410275e531ec1271878a3
 	            $user->name = $input['name'];
 	            $user->pass = $input['pass'];
 	            $user->email = $input['email'];
