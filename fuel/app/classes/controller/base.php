@@ -3,13 +3,34 @@ use \Firebase\JWT\JWT;
 
 class Controller_Base extends Controller_Rest 
 {   
+    protected function keyName(){
+        $_key = "TextKey";
+        return $_key;
+    }
+
     protected function checkToken()
     {
         $headers = apache_request_headers();
-        $token = $headers['Authorization'];        
-        $tokenDecodificado = JWT::decode($token, "TextKey", array('HS256'));
+        $token = $headers['Authorization'];    
+        $key = self::keyName();    
+        $tokenDecodificado = JWT::decode($token, $key, array('HS256'));
 
         return $tokenDecodificado->id;
+    }
+
+    protected function createToken($name, $pass, $id)
+    {
+        $token = array(
+            "name" => $name,
+            "pass" => $pass,
+            "id" => $id,
+            "logged" => true
+        );
+        
+        $key = self::keyName(); 
+        $jwt = JWT::encode($token, $key);
+
+        return $jwt;  
     }
 
     public function post_create()

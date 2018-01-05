@@ -167,24 +167,14 @@ class Controller_Users extends Controller_Base
                 ));
                 return $json;
             }else{
-                $key = "TextKey";
-                $token = array(
-                    "name" => $_GET['name'],
-                    "pass" => $_GET['pass'],
-                    "id" => $id,
-                    "logged" => true
-                );
-                
-                $jwt = JWT::encode($token, $key);
-
+            	$token = self::createToken($_GET['name'],$_GET['pass'],$id);  
                 $json = $this->response(array(
                     'code' => 201,
                     'message' => 'Logeado',
-                    'token' => $jwt             
+                    'token' => $token           
                 ));
                 return $json;  
             }
-
         } 
         catch (Exception $e) 
         {
@@ -205,11 +195,9 @@ class Controller_Users extends Controller_Base
                 $show[] = $value->name;
                 $showID[] = $value->id;
         }
-        $test = self::checkToken();
         $json = $this->response(array(
             'name' => $show,
-            'id' => $showID,
-            'bolean' => $test
+            'id' => $showID
         ));
 
         return $json;  

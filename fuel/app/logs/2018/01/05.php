@@ -27,3 +27,32 @@ WARNING - 2018-01-05 12:09:55 --> Fuel\Core\Fuel::init - The configured locale e
 WARNING - 2018-01-05 12:09:59 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
 WARNING - 2018-01-05 12:10:10 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
 WARNING - 2018-01-05 12:12:47 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2018-01-05 12:32:22 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2018-01-05 12:32:22 --> Error - syntax error, unexpected 'protected' (T_PROTECTED), expecting ',' or ';' in /var/www/html/julianparrillaRep/fuel/app/classes/controller/base.php on line 8
+WARNING - 2018-01-05 12:32:50 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2018-01-05 12:32:50 --> Error - syntax error, unexpected 'protected' (T_PROTECTED), expecting ',' or ';' in /var/www/html/julianparrillaRep/fuel/app/classes/controller/base.php on line 8
+WARNING - 2018-01-05 12:34:07 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2018-01-05 12:34:07 --> Error - syntax error, unexpected 'protected' (T_PROTECTED), expecting ',' or ';' in /var/www/html/julianparrillaRep/fuel/app/classes/controller/base.php on line 8
+WARNING - 2018-01-05 12:34:19 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2018-01-05 12:34:45 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2018-01-05 12:34:53 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2018-01-05 12:35:01 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2018-01-05 12:35:18 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2018-01-05 12:35:35 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2018-01-05 12:35:35 --> Notice - Undefined index: Authorization in /var/www/html/julianparrillaRep/fuel/app/classes/controller/base.php on line 11
+WARNING - 2018-01-05 12:36:51 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2018-01-05 12:37:11 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2018-01-05 12:37:21 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2018-01-05 12:37:35 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2018-01-05 12:37:38 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2018-01-05 12:37:45 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2018-01-05 12:43:06 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2018-01-05 12:43:06 --> Error - Cannot access empty property in /var/www/html/julianparrillaRep/fuel/app/classes/controller/base.php on line 26
+WARNING - 2018-01-05 12:44:19 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2018-01-05 12:44:19 --> Error - Cannot access empty property in /var/www/html/julianparrillaRep/fuel/app/classes/controller/base.php on line 25
+WARNING - 2018-01-05 12:44:53 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2018-01-05 12:45:48 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2018-01-05 12:45:48 --> Error - Cannot access empty property in /var/www/html/julianparrillaRep/fuel/app/classes/controller/base.php on line 26
+WARNING - 2018-01-05 12:50:52 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2018-01-05 12:50:52 --> Error - Call to undefined function keyName() in /var/www/html/julianparrillaRep/fuel/app/classes/controller/base.php on line 30
+WARNING - 2018-01-05 12:51:28 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
